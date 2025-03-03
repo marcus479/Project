@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Sports Slot</title>
+    <link rel="stylesheet" href="Booking.css">
+    <link rel="icon" type="image/png" href="images/page logo.jpeg">
+</head>
+<body>
+   
+    <header>
+        <div class="header-container">
+            <h1>BOOKING</h1>
+        </div>
+    </header>
+
+    <section class="booking-section">
+        <div class="booking-details">
+            <h2>Booking Details</h2>
+            <p>Please fill in the details below to book your desired sports slot.</p>
+        </div>
+        <div class="form-container">
+            <form id="booking-form" class="booking-form" onsubmit="validateForm(event)" action="Booking.php" method="POST">                
+                <!-- Venue and Fees -->
+                <div class="form-row full-width">
+                    <div class="form-group">
+                        <label for="venue">Venue</label>
+                        <select id="venue" name="venue" onchange="updateFees()" required>
+                            <option value="">Select Venue</option>
+                            <option value="Swimming">Swimming</option>
+                            <option value="Conference Room">Conference Room</option>
+                            <option value="Library">Library</option>
+                            <option value="Snooker">Snooker</option>
+                            <option value="Tennis">Tennis</option>
+                            <option value="Gymnasium">Gymnasium</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fees">Fees (per hour)</label>
+                        <input type="text" id="fees" name="fees" placeholder="RMXXX" readonly required>
+                    </div>
+                </div>
+
+                <!-- Name and Phone -->
+                <div class="form-row full-width">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="012-345-6789" required>
+                    </div>
+                </div>
+
+                <!-- Date and Email -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+                    </div>
+                </div>
+
+                <!-- Time Selection -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="start-time">Start Time</label>
+                        <input type="time" id="start-time" name="start-time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="end-time">End Time</label>
+                        <input type="time" id="end-time" name="end-time" required>
+                    </div>
+                </div>
+
+                <!-- Error Message -->
+                <div id="error-message" class="error"></div>
+
+                <!-- Submit Button -->
+                <input type="submit" value="SUBMIT BOOKING">
+            </form>
+        </div>
+    </section>
+
+    <script src="Booking.js"></script>
+</body>
+</html>
+
+
