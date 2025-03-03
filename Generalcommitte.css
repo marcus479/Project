@@ -1,0 +1,264 @@
+/* Updated CSS for the menu bar */
+.menu-bar {
+    background-color: #333333;
+    height: 180px;
+    overflow: hidden;
+    position: fixed; /* Makes the menu bar stay on top */
+    left: 0;
+    top: 0; /* Positions it at the top of the page */
+    width: 100%; /* Ensures it stretches across the entire width of the page */
+    z-index: 1000; /* Keeps it above other content */
+}
+
+/* Add margin to the body to ensure content starts below the menu bar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 180px; /* Keep this to account for the menu bar height */
+    background-color: white; /* Set background to white */
+}
+
+/* Menu bar styles */
+.menu-bar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar ul .logo {
+    margin-right: auto; /* Pushes other menu items to the right */
+}
+
+.menu-bar ul li {
+    position: relative;
+}
+
+.menu-bar ul li a {
+    display: block;
+    padding: 20px 50px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu-bar ul li a img {
+    height: 40px; /* Adjust this value to change the logo size */
+    vertical-align: middle;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Dropdown menu */
+.menu-bar ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #001f3f;
+    min-width: 220px;
+    z-index: 3000;
+}
+
+.menu-bar ul li:hover .dropdown {
+    display: block;
+}
+
+.menu-bar ul .dropdown li {
+    float: none;
+}
+
+.menu-bar ul .dropdown li a {
+    padding: 5px 16px;
+    color: white;
+}
+
+.menu-bar ul .dropdown li a:hover {
+    background-color: #575757;
+}
+
+.menu-bar ul li a img {
+    height: 80px; /* Adjust this value to change the logo size */
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-bar ul li .logo-text {
+    text-align: center;
+    color: white;
+    font-size: 24px; /* Adjust font size as needed */
+    margin-top: 5px;
+}
+
+.menu-bar ul li.logo a:hover {
+    background-color: #575757;
+}
+
+.page-header {
+    background-color: rgb(0, 173, 230); /* A dark blue background for the header */
+    color: white; /* Change text color to white */
+    padding: 73px; /* Reduced padding for a smaller header */
+    margin-top: 0; /* Set margin-top to 0 to eliminate space */
+    width: auto;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 45px; /* Adjust the font size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Ensure the h1 text color is white */
+}
+
+.title-container {
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding for spacing around the titles */
+    margin: 0; /* Remove default margin */
+    background-color: white; /* Ensure it matches the header background */
+}
+
+/* Retain existing styles for h1, h2, and h3 */
+.title-container h1 {
+    margin: 10px 0; /* Adjust margin if needed */
+    font-size: 1.25em;
+    color: darkslategray; /* Keep this as is or change to your desired color */
+}
+
+.title-container h2 {
+    margin: 5px 0;
+    font-size: 1em;
+    color: grey;
+}
+
+.title-container h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+    color: black;
+}
+
+
+/* Committee section styles */
+.committee-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.form-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.committee-member {
+    text-align: center;
+    width: 150px;
+}
+
+.member-info img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+    color: grey;
+}
+
+.role {
+    font-size: 0.9em;
+    color: #333;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 5px 0;
+}
+
+.contact-info {
+    padding: 50px; /* Reduced padding for a more compact design */
+    background-color: #add8e6; /* Light Blue */
+    color: #333333; /* Dark gray text for better readability */
+    margin-top: 50px; /* Slightly reduced margin for a cleaner look */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+.contact-images {
+    display: flex; /* Use flexbox for a horizontal layout */
+    justify-content: center; /* Center the items horizontally */
+    gap: 30px; /* Add spacing between items */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    margin-top: 20px; /* Optional: Add some space at the top */
+}
+
+.contact-item {
+    text-align: center; /* Center the content inside each item */
+    flex-basis: 200px; /* Set a base width for each item */
+    flex-grow: 1; /* Allow items to grow evenly */
+    padding: 10px; /* Optional: Add padding around each item */
+}
+
+.contact-info h2 {
+    font-weight: bold;
+    font-size: 48px; /* Adjusted size */
+    color: #0056b3; /* A pleasant blue color for the heading */
+}
+
+.contact-info h3 {
+    font-weight: bold;
+    font-size: 20px; /* Adjusted size */
+    color: #000000; /* Match with the heading color */
+}
+
+.contact-item p {
+    font-size: 20px; /* Adjusted for consistency */
+    margin-top: 10px; /* Optional: add space between the image and the text */
+    color: #555555; /* Medium gray for paragraph text */
+    font-weight: normal; /* Normal weight for better reading */
+}
+
+.contact-image {
+    height: 80px; /* Slightly smaller image for better alignment */
+    width: auto;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Optional: Add hover effects */
+.contact-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    transition: transform 0.2s ease; /* Smooth transition */
+    background-color: #a19e9e;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333; /* Dark background for the footer */
+    color: white; /* Text color */
+    position: relative; /* Adjust if needed */
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 20px;
+    color: white;
+}
+

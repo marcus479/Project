@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<!-- Defines the document type as HTML5 and sets the language of the page to English -->
+
+<head>
+    <meta charset="UTF-8"> 
+    <!-- Specifies the character encoding for the document, ensuring it supports all standard characters -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the website responsive by controlling the page's width and scaling on different devices -->
+
+    <title>Booking History</title> 
+    <!-- Sets the title of the page, which will be shown in the browser tab -->
+
+    <link rel="stylesheet" href="Viewbooking.css"> 
+    <!-- Links an external CSS file to style the page -->
+
+    <link rel="icon" type="image/png" href="images/page logo.jpeg">
+    <!-- Sets the favicon (icon displayed in the browser tab) for the page using a .jpeg image -->
+</head>
+
+<body>
+    <header>
+        <h1>Booking History</h1> 
+        <!-- Displays the main header of the page with the text "Booking History" -->
+    </header>
+
+    <section class="confirmation-section">
+        <h2>Booking Details:</h2> 
+       ^ <!-- Displays a sub-header with the text "Booking Details:" -->
+
+        <div class="booking-details-container" id="booking-details">
+            <!-- This div will hold and display the booking details dynamically via JavaScript -->
+        </div>
+
+        <a href="Bookingmember.html" class="payment-button">PROCEED TO BOOKING</a> 
+        <!-- Creates a link styled as a button that redirects the user to the Booking page when clicked -->
+    </section>
+
+    <script>
+        function loadBookingDetails() { 
+            // Function to fetch and display booking details using AJAX
+
+            const xhr = new XMLHttpRequest(); 
+            // Creates a new XMLHttpRequest object to handle the request
+
+            xhr.open("GET", "Viewbooking.php", true); 
+            // Opens a GET request to the server-side PHP file 'Viewbooking.php' to fetch booking data
+
+            xhr.onload = function() { 
+                // Specifies what happens when the request completes
+
+                if (xhr.status === 200) { 
+                    // Checks if the request was successful (HTTP status 200)
+
+                    const booking = JSON.parse(xhr.responseText); 
+                    // Parses the JSON response containing booking details
+
+                    if (booking.error) { 
+                        // If an error is present in the response, display an error message
+
+                        document.getElementById('booking-details').innerHTML = "<p>No booking details found.</p>";
+                        // Sets the innerHTML of the booking-details div to display an error message
+                    } else { 
+                        // If no error, booking details are displayed
+
+                        document.getElementById('booking-details').innerHTML = `
+                            <form class="booking-form">
+                                <div class="form-group">
+                                    <label for="venue">Venue</label>
+                                    <input type="text" id="venue" name="venue" value="${booking.Venue}" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fees">Fees</label>
+                                    <input type="text" id="fees" name="fees" value="${booking.Fees}" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" value="${booking.Name}" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone" value="${booking.Phone}" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date" value="${booking.Date}" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" value="${booking.Email}" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="start-time">Start Time</label>
+                                    <input type="time" id="start-time" name="start-time" value="${booking['Start time']}" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="end-time">End Time</label>
+                                    <input type="time" id="end-time" name="end-time" value="${booking['End time']}" readonly>
+                                </div>
+                            </form>
+                        `;
+                        // Dynamically generates and displays a form with booking details, filling in each field with data from the response
+                    }
+                } else { 
+                    // If the request failed (not HTTP status 200), display an error message
+
+                    document.getElementById('booking-details').innerHTML = "<p>Error fetching booking details.</p>";
+                    // Sets the innerHTML of the booking-details div to display an error message
+                }
+            };
+            xhr.send(); 
+            // Sends the request to the server
+        }
+
+        window.onload = function() { 
+            // Runs when the page is fully loaded
+
+            loadBookingDetails(); 
+            // Calls the function to load booking details as soon as the page loads
+
+            setInterval(loadBookingDetails, 5000);  
+            // Sets up a timer to refresh booking details every 5 seconds
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+

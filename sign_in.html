@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Benefits</title>
+    <link rel="icon" type="image/png" href="images/website_logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: rgb(0, 173, 230);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 16px;
+        }
+        .container {
+            width: 70%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        content {
+            display: inline-block;
+            text-align: left;
+            padding-left: 0;
+        }
+        .fees {
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #00bfff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+            margin-bottom: 15px;
+        }
+        label {
+            color: #555;
+            margin-bottom: 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">SIGN UP</h1>
+    </header>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form id="registrationForm" onsubmit="return validateForm()" action="connect.php" method="post">
+            <!-- Left Column -->
+            <div class="form-group">
+                <label for="name">NAME:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="email">EMAIL:</label>
+                <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="ic">IC No:</label>
+                <input type="text" id="ic" name="ic" placeholder="123456-78-9101" required>
+            </div>
+
+            <!-- Right Column -->
+            <div class="form-group">
+                <label for="phone">PHONE NUMBER:</label>
+                <input type="tel" id="phone" name="phone" placeholder="012-345-67890" required pattern="^01\d{8}$" title="Phone number must start with '01' and contain 11 digits.">
+            </div>
+            <div class="form-group">
+                <label for="password">PASSWORD:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">CONFIRM PASSWORD:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            </div>
+
+            <!-- Full width button -->
+            <button type="submit">Sign in</button>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+            const phone = document.getElementById("phone").value;
+            const phonePattern = /^01\d{8}$/;
+
+            // Check password matching
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+
+            // Check phone number validity
+            if (!phonePattern.test(phone)) {
+                alert("Phone number must start with '01' and contain 11 digits.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif; /* Sets the font family to Arial with sans-serif as a fallback */
+    margin: 0; /* Removes any default margin around the body */
+    padding: 0; /* Removes any default padding around the body */
+    display: flex; /* Makes the body a flex container to center content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Sets the height to fill the full viewport */
+    background-color: #e6f3ff; /* Light blue background for the body */
+}
+
+header {
+    width: 100%; /* Ensures the header spans the full width of the page */
+    position: absolute; /* Positions the header absolutely on the page */
+    top: 0; /* Aligns the header to the top of the page */
+    left: 0; /* Aligns the header to the left edge */
+    padding: 20px; /* Adds padding inside the header */
+}
+
+.back-arrow {
+    position: absolute; /* Positions the back arrow absolutely relative to the page */
+    top: 20px; /* Positions it 20px from the top */
+    left: 20px; /* Positions it 20px from the left */
+    width: 30px; /* Sets the width of the back arrow */
+    height: 30px; /* Sets the height of the back arrow */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering */
+}
+
+/* CSS Arrow */
+.back-arrow::before {
+    content: ''; /* Inserts an empty element to create the arrow shape */
+    border: solid black; /* Defines the arrow color with solid black lines */
+    border-width: 0 3px 3px 0; /* Sets the width of the arrow lines */
+    display: inline-block; /* Makes the arrow an inline block element */
+    padding: 8px; /* Adds padding to shape the arrow */
+    transform: rotate(135deg); /* Rotates the element 135 degrees to form an arrow */
+    -webkit-transform: rotate(135deg); /* Adds compatibility for webkit-based browsers */
+}
+
+.payment-section {
+    display: flex; /* Sets the payment section as a flex container */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    width: 100%; /* Ensures the payment section spans the full width of the page */
+}
+
+.payment-container {
+    max-width: 500px; /* Sets the maximum width of the payment container */
+    width: 90%; /* Sets the width of the container to 90% of the parent */
+    padding: 50px; /* Adds padding inside the container */
+    position: relative; /* Makes the container's position relative to its parent */
+    background-color: white; /* Sets the background color of the container to white */
+    border: 3px solid #4B0082; /* Adds a 3px indigo border around the container */
+    border-radius: 15px; /* Rounds the corners of the container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect to give depth */
+    overflow: hidden; /* Prevents content from overflowing outside the container */
+}
+
+.payment-option {
+    display: flex; /* Makes the payment option a flex container */
+    align-items: center; /* Aligns items vertically in the center */
+    margin-bottom: 30px; /* Adds space between payment options */
+}
+
+label {
+    font-size: 1.4em; /* Sets the font size for the payment method labels */
+    flex: 1; /* Makes the label take up available space */
+    margin-left: 10px; /* Adds left margin to the label */
+}
+
+input[type="radio"] {
+    width: auto; /* Ensures the radio button's width adjusts automatically */
+    padding: 15px; /* Adds padding for a larger clickable area */
+    font-size: 1.1em; /* Increases the font size of the radio input */
+    margin-left: 10px; /* Adds space to the left of the radio button */
+}
+
+button.confirm-btn {
+    background-color: rgb(0, 173, 230); /* Sets the background color to light blue */
+    color: white; /* Makes the text color white */
+    border: none; /* Removes any border from the button */
+    padding: 20px; /* Adds padding inside the button for a larger clickable area */
+    font-size: 1.3em; /* Increases the font size of the button text */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering */
+    width: 100%; /* Makes the button span the full width of its container */
+    border-radius: 5px; /* Adds slight rounding to the button corners */
+    margin-top: 20px; /* Adds space between the button and content above it */
+}
+
+button.confirm-btn:hover {
+    background-color: #e5e501; /* Changes the background color when the button is hovered over */
+}
+
+.header-title {
+    text-align: center; /* Centers the header title */
+    font-size: 1.8em; /* Sets the font size for the header title */
+    margin-bottom: 40px; /* Adds space between the title and the payment options */
+    color: rgb(0, 173, 230); /* Sets the text color to light blue */
+}
+
+
+

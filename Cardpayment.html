@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Selangor Sports Club</title>
+    <link rel="stylesheet" href="Cardpayment.css">
+    <link rel="icon" type="image/png" href="images/page logo.jpeg">
+</head>
+<body>
+
+    <h1>CARD PAYMENT</h1>
+
+    <div class="form-container">
+        <form class="payment-form" onsubmit="validateForm(event)" action="Cardpayment.php" method="POST">
+            <input type="hidden" id="booking_id" name="booking_id" value="">
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <div style="position: relative;">
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required oninput="formatCardNumber(this); validateCardNumber(this);" maxlength="19">
+                    <div class="icon nfc-icon" onclick="handleNFCClick()"></div>
+                    <div class="icon camera-icon" onclick="handleCameraClick()"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="card-holder-name">Card Holder Name</label>
+                <input type="text" id="card-holder-name" name="card-holder-name" placeholder="John Doe" required oninput="restrictToAlphabets(this);">
+            </div>
+
+            <div class="form-group">
+                <label for="card-name">Card Name</label>
+                <input type="text" id="card-name" name="card-name" placeholder="Visa/MasterCard" required oninput="restrictToAlphabets(this);">
+            </div>
+
+            <div class="form-group">
+                <label for="expiry-date">Expiry Date (MM/YY)</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required oninput="formatExpiryDate(this);" maxlength="5">
+            </div>
+
+            <div class="form-group">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" name="cvc" placeholder="123" required oninput="restrictCVC(this);" maxlength="3">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="PAY NOW">
+            </div>
+        </form>
+    </div>
+
+    <script src="Cardpayment.js"></script>
+</body>
+</html>
+
+
+

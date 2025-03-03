@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Sets font style for the entire page */
+    background-color: #f7f7f7; /* Light grey background for readability */
+    margin: 0; /* Removes default margin */
+    padding: 20; /* Adds general padding around content */
+}
+
+/* Menu Bar Styling */
+.menu-bar {
+    background-color: #333333; /* Dark background color for the menu bar */
+    height: 180px; /* Sets menu bar height */
+    overflow: hidden; /* Hides overflow content */
+    position: fixed; /* Fixes menu bar at the top */
+    left: 0;
+    top: 0; /* Positions the menu at the top of the page */
+    width: 100%; /* Extends menu bar across full width */
+    z-index: 1000; /* Positions it above other elements */
+}
+
+.menu-bar ul {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    list-style: none; /* Removes bullets from the list */
+    display: flex; /* Horizontal alignment of menu items */
+    align-items: center; /* Centers items vertically */
+}
+
+.menu-bar ul .logo {
+    margin-right: auto; /* Pushes other menu items to the right */
+}
+
+.menu-bar ul li {
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.menu-bar ul li a {
+    display: block;
+    padding: 20px 50px; /* Adds padding for spacing */
+    color: white; /* Sets text color to white */
+    text-align: center; /* Centers text */
+    text-decoration: none; /* Removes underline */
+    font-size: 20px; /* Sets font size for menu items */
+}
+
+.menu-bar ul li a img {
+    height: 40px; /* Sets logo size */
+    vertical-align: middle; /* Aligns logo in the middle */
+}
+
+.menu-bar ul li a:hover {
+    background-color: #575757; /* Changes background color on hover */
+}
+
+/* Dropdown Menu Styles */
+.menu-bar ul .dropdown {
+    display: none; /* Hides dropdown initially */
+    position: absolute; /* Positions dropdown below main item */
+    top: 100%; /* Aligns dropdown directly below menu */
+    left: 0;
+    background-color: #001f3f; /* Dark blue background */
+    min-width: 220px; /* Sets minimum dropdown width */
+    z-index: 3000; /* Positions it above other items */
+}
+
+.menu-bar ul li:hover .dropdown {
+    display: block; /* Shows dropdown when hovering on menu item */
+}
+
+.menu-bar ul .dropdown li {
+    float: none; /* Removes float from dropdown items */
+}
+
+.menu-bar ul .dropdown li a {
+    padding: 5px 16px; /* Padding for dropdown items */
+    color: white; /* Text color for dropdown */
+}
+
+.menu-bar ul .dropdown li a:hover {
+    background-color: #575757; /* Changes background on hover */
+}
+
+.menu-bar ul li a img {
+    height: 80px; /* Adjust logo size */
+    display: block;
+    margin: 0 auto; /* Centers logo */
+}
+
+.menu-bar ul li .logo-text {
+    text-align: center;
+    color: white;
+    font-size: 24px; /* Font size for logo text */
+    margin-top: 5px;
+}
+
+/* Page Header Styling */
+.page-header {
+    background-color: rgb(0, 173, 230); /* Light blue header */
+    color: white; /* White text for header */
+    padding: 100px; /* Adds padding around header text */
+    margin-top: 180px; /* Offsets header below fixed menu */
+    width: auto;
+    text-align: center; /* Centers header text */
+}
+
+.page-header h1 {
+    margin: 0; /* Removes default margin */
+    font-size: 45px; /* Font size for header */
+    font-weight: bold; /* Bold header text */
+}
+
+/* Operating Hours Block */
+.operating-hours {
+    background-color: #e6f2ff; /* Light blue background for operating hours */
+    border-radius: 10px; /* Rounds corners */
+    padding: 20px; /* Adds padding inside block */
+    max-width: 500px; /* Sets max width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    margin: 80px auto; /* Centers block */
+}
+
+.operating-hours__title {
+    color: #333; /* Dark color for title text */
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 24px; /* Font size for title */
+    display: flex; /* Aligns icon and text */
+    align-items: center; /* Centers icon and text */
+}
+
+.operating-hours__icon {
+    margin-right: 10px; /* Adds spacing between icon and text */
+}
+
+.operating-hours__schedule {
+    margin: 10px 0; /* Spacing between items */
+    color: #333;
+    font-size: 18px; /* Font size for schedule text */
+}
+
+.operating-hours__days {
+    color: #4B0082; /* Indigo for days */
+    font-weight: bold;
+}
+
+/* Booking Button Styling */
+.Booking {
+    display: inline-block;
+    background-color: rgb(0, 173, 230); /* Light blue button color */
+    color: white;
+    padding: 15px 40px; /* Adds padding for size */
+    width: 200px;
+    text-align: center;
+    text-decoration: none; /* Removes underline */
+    font-size: 18px;
+    transition: background-color 0.3s; /* Smooth color change */
+    font-weight: bold; /* Bold text */
+}
+
+.Booking:hover {
+    background-color: #e5e501; /* Changes color on hover */
+}
+
+.button-container {
+    display: flex; /* Centers button horizontally */
+    justify-content: center;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    padding: 50px; /* Padding around contact info */
+    background-color: #add8e6; /* Light blue background */
+    color: #333333; /* Dark gray text */
+    margin-top: 50px; /* Adds space above contact info */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content */
+    text-align: center;
+}
+
+.contact-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Spacing between images */
+    flex-wrap: wrap; /* Wraps items on smaller screens */
+    margin-top: 20px; /* Space above images */
+}
+
+.contact-item {
+    text-align: center;
+    flex-basis: 200px; /* Sets base width */
+    flex-grow: 1;
+    padding: 10px; /* Adds padding inside each item */
+}
+
+.contact-info h2 {
+    font-weight: bold;
+    font-size: 48px; /* Font size for contact heading */
+    color: #0056b3; /* Blue color for heading */
+}
+
+.contact-info h3 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000; /* Black color for subheading */
+}
+
+.contact-item p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #555555; /* Medium gray for paragraph text */
+    font-weight: normal;
+}
+
+.contact-image {
+    height: 80px;
+    width: auto;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Hover effect on contact items */
+.contact-item:hover {
+    transform: scale(1.05); /* Scale effect */
+    transition: transform 0.2s ease; /* Smooth transition */
+    background-color: #a19e9e; /* Background change on hover */
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333; /* Dark background for footer */
+    color: white; /* White text for footer */
+    position: relative;
+}
+
+.footer p {
+    margin: 0; /* Removes default margin */
+    font-size: 20px; /* Footer font size */
+}

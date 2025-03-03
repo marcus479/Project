@@ -1,0 +1,491 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20;
+}
+
+.menu-bar {
+    background-color:#333333;
+    height: 180px;
+    overflow: hidden;
+    position: fixed; /* Makes the menu bar stay on top */
+    left: 0;
+    top: 0; /* Positions it at the top of the page */
+    width: 100%; /* Ensures it stretches across the entire width of the page */
+    z-index: 1000; /* Keeps it above other content */
+}
+
+.menu-bar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.menu-bar ul .logo {
+    margin-right: auto; /* Pushes other menu items to the right */
+}
+
+.menu-bar ul li {
+    position: relative;
+}
+
+.menu-bar ul li a {
+    display: block;
+    padding: 20px 50px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu-bar ul li a img {
+    height: 40px; /* Adjust this value to change the logo size */
+    vertical-align: middle;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Dropdown menu */
+.menu-bar ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:#001f3f;
+    min-width: 220px;
+    z-index: 3000;
+}
+
+.menu-bar ul li:hover .dropdown {
+    display: block;
+}
+
+.menu-bar ul .dropdown li {
+    float: none;
+}
+
+.menu-bar ul .dropdown li a {
+    padding: 5px 16px;
+    color: white;
+}
+
+.menu-bar ul .dropdown li a:hover {
+    background-color: #575757;
+}
+
+.menu-bar ul li a img {
+    height: 80px; /* Adjust this value to change the logo size */
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-bar ul li .logo-text {
+    text-align: center;
+    color: white;
+    font-size: 24px; /* Adjust font size as needed */
+    margin-top: 5px;
+}
+
+.menu-bar ul li.logo a:hover {
+    background-color: #575757;
+}
+
+/* Hover effect for the Log Out link only */
+.menu-bar ul .dropdown li a.logout-link:hover {
+    background-color:#001f3f; 
+    color: white; /* Ensure the text stays readable */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.facilities {
+    margin-top: 1150px; /* Ensures content starts below the fixed menu */
+    padding: 30px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+.facility-images {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between items */
+    gap: 40px;
+}
+
+.facility-item {
+    text-align: center;
+}
+
+.facility-image {
+    height: 300px; /* Adjust as needed */
+    width: auto;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.facilities h1 {
+    font-size: 60px;
+    margin-bottom: 50px; /* Space between heading and images */
+    color:#006980
+}
+
+.facility-item p {
+    font-size: 36px; /* Adjust this value as needed */
+    margin-top: 10px; /* Optional: add space between the image and the text */
+    color:#006980;
+    font-weight: bold;
+}
+
+.famore-info {
+    display: block; /* Makes it a block element */
+    background-color: rgb(0, 173, 230); /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Adjust padding for button size */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition */
+    font-weight: bold;
+}
+
+.famore-info:hover {
+    background-color: #e5e501; /* Change color on hover */
+}
+
+.spmore-info:hover {
+    background-color: #e5e501; /* Change color on hover */
+}
+
+.sport {
+    margin-top: 100px; /* Ensures content starts below the fixed menu */
+    padding: 30px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+.sport-images {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between items */
+    gap: 40px;
+}
+
+.sport-item {
+    text-align: center;
+}
+
+.sport-image {
+    height: 300px;
+    width: auto;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.sport h1 {
+    font-size: 60px;
+    margin-bottom: 50px; /* Space between heading and images */
+    color:#006980
+}
+
+.sport-item p {
+    font-size: 36px; /* Adjust this value as needed */
+    margin-top: 10px; /* Optional: add space between the image and the text */
+    color:#006980;
+    font-weight: bold;
+}
+
+.spmore-info {
+    display: block; /* Makes it a block element */
+    background-color: rgb(0, 173, 230); /* Button color */
+    color: white; /* Text color */
+    padding: 10px 10px; /* Adjust padding for button size */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition */
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+.contact-info {
+    padding: 50px; /* Reduced padding for a more compact design */
+    background-color: #add8e6; /* Light Blue */
+    color: #333333; /* Dark gray text for better readability */
+    margin-top: 50px; /* Slightly reduced margin for a cleaner look */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+.contact-images {
+    display: flex; /* Use flexbox for a horizontal layout */
+    justify-content: center; /* Center the items horizontally */
+    gap: 30px; /* Add spacing between items */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    margin-top: 20px; /* Optional: Add some space at the top */
+}
+
+.contact-item {
+    text-align: center; /* Center the content inside each item */
+    flex-basis: 200px; /* Set a base width for each item */
+    flex-grow: 1; /* Allow items to grow evenly */
+    padding: 10px; /* Optional: Add padding around each item */
+}
+
+.contact-info h2 {
+    font-weight: bold;
+    font-size: 48px; /* Adjusted size */
+    color: #0056b3; /* A pleasant blue color for the heading */
+}
+
+.contact-info h3 {
+    font-weight: bold;
+    font-size: 20px; /* Adjusted size */
+    color: #000000; /* Match with the heading color */
+}
+
+.contact-item p {
+    font-size: 20px; /* Adjusted for consistency */
+    margin-top: 10px; /* Optional: add space between the image and the text */
+    color: #555555; /* Medium gray for paragraph text */
+    font-weight: normal; /* Normal weight for better reading */
+}
+
+.contact-image {
+    height: 80px; /* Slightly smaller image for better alignment */
+    width: auto;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Optional: Add hover effects */
+.contact-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    transition: transform 0.2s ease; /* Smooth transition */
+    background-color: #a19e9e;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333; /* Dark background for the footer */
+    color: white; /* Text color */
+    position: relative; /* Adjust if needed */
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 20px
+}
+
+.latest-events {
+    margin-top: 100px;
+    padding: 30px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center;
+}
+
+.latest-events h1 {
+    font-size: 60px;
+    color: #006980;
+    margin-bottom: 50px;
+}
+
+.events-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.event-item {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: space-between; /* Space out items */
+    text-align: center;
+    margin: 10px; /* Add some margin for spacing */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+    padding: 20px; /* Add padding inside each event block */
+    width: 300px; /* Set a fixed width for event items */
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.event-item h3 {
+    font-size: 28px;
+    color: #006980;
+    margin: 15px 0 10px;
+}
+
+.event-item p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.event-more-info {
+    display: inline-block; /* Make it a block element for easier sizing */
+    background-color: rgb(0, 173, 230); /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Adjust padding for button size */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    margin-top: auto; /* Push the button to the bottom of the event item */
+    transition: background-color 0.3s; /* Smooth transition */
+    font-weight: bold;
+}
+
+.event-more-info:hover {
+    background-color: #e5e501;
+}
+
+.gallery {
+    margin-top: 100px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.gallery h1 {
+    font-size: 60px;
+    color: #006980;
+    margin-bottom: 50px;
+}
+
+div.scroll-gallery {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    border: 1px solid #e0e0e0; /* Light border for definition */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+div.scroll-gallery img {
+    padding: 10px;
+    display: inline-block;
+    width: 350px;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+/* Add hover effect on images */
+div.scroll-gallery img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* To remove horizontal scrollbar but keep functionality */
+div.scroll-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 10000;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Specifies the document type and language as English -->
+<head>
+    <meta charset="UTF-8"> <!-- Defines the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the webpage is responsive on all devices -->
+    <title>Payment Method - Selangor Sports Club</title> <!-- Sets the title of the webpage that appears in the browser tab -->
+    <link rel="stylesheet" href="Paymentmethod.css"> <!-- Links to an external CSS file for styling -->
+    <link rel="icon" type="image/png" href="images/page logo.jpeg"> <!-- Adds a favicon (icon) for the webpage -->
+        
+    <!-- JavaScript Section -->
+    <script>
+        function confirmPayment() {
+        const paymentMethod = document.querySelector('input[name="payment-method"]:checked');
+
+        if (paymentMethod) {
+            if (paymentMethod.id === 'card') {
+                window.location.href = "Cardpayment_member.html";
+                } else if (paymentMethod.id === 'cash') {
+                    // Send a POST request to save booking details for cash payment
+                    fetch('CashPayment.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: 'payment_method=cash'
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        if (data === 'success') {
+                            window.location.href = "Thankyou_member.html";
+                        } else {
+                            alert("Error processing payment. Please try again.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert("An error occurred. Please try again.");
+                    });
+                }
+            } else {
+                alert("Please select a payment method.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Content Section for Payment Method Selection -->
+    <section class="payment-section">
+        <div class="payment-container"> <!-- Container for the payment options -->
+            <h2 class="header-title">SELECT PAYMENT METHOD</h2> <!-- Header title for the payment section -->
+
+            <!-- Cash Payment Option -->
+            <div class="payment-option">
+                <input type="radio" id="cash" name="payment-method"> <!-- Radio button for selecting cash payment -->
+                <label for="cash"> <!-- Label for the cash payment option -->
+                    <img src="images/cash icon.png"Cash Icon" style="width:24px; vertical-align:middle; margin-right:10px;"> <!-- Image for cash payment icon -->
+                    Cash Payment at Counter
+                </label>
+            </div>
+
+            <!-- Credit/Debit Card Payment Option -->
+            <div class="payment-option">
+                <input type="radio" id="card" name="payment-method"> <!-- Radio button for selecting credit/debit card payment -->
+                <label for="card"> <!-- Label for the credit/debit card option -->
+                    <img src="images/credit-cards-icon.png" alt="Credit Card Icon" style="width:24px; vertical-align:middle; margin-right:10px;"> <!-- Image for credit card icon -->
+                    Credit Card / Debit Card
+                </label>
+            </div>
+
+            <!-- Confirmation Button -->
+            <button class="confirm-btn" onclick="confirmPayment()">CONFIRM</button> <!-- Button to confirm the selected payment method -->
+        </div>
+    </section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

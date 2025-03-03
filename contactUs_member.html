@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Contact Us</title>
+        <link rel="icon" type="image/png" href="images/htmlLogo1.png">
+        <link rel="stylesheet" href="ContactUS.css">
+
+    </head>
+    <body>
+
+        <nav class="menu-bar">
+            <ul>
+                <li class="logo">
+                    <a href="http://localhost/rwdd/HTML_Assignment/Member_homePage.html">
+                        <img src="images/htmlLogo2.png" alt="Logo">
+                        <div class="logo-text">Selangor Sport Club</div>
+                    </a>
+                </li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/Member_homePage.html">Home</a></li>
+                <li><a>About</a>
+                    <ul class="dropdown">
+                        <li><a href="http://localhost/rwdd/HTML_Assignment/history_member.html">History</a></li>
+                        <li><a href="http://localhost/rwdd/HTML_Assignment/GeneralCommitte_member.html">General Committee</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/gallery_member.html">Gallery</a></li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/contactUs_member.html">Contact Us</a></li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/Viewbooking.html">View Booking</a></li>
+                <li><a>Account</a>
+                    <ul class="dropdown">
+                        <li><a href="http://localhost/rwdd/HTML_Assignment/SelangorSportClub.html" class="logout-link">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <header class="page-header">
+            <div class="writeText">
+                <p class="text" id="typing">Contact Us and Tell Us Your Feeling.</p>
+            </div>
+        </header>
+
+
+        <div class="container">
+            <h2>Leave us a Message? Please fill the below form:</h2>
+            <form id="contactForm" class="form" action="ContactUs.php" method="POST">
+                <div class="grid">
+                    <div class="form-item">
+                        <input type="text" id="name" name="name" placeholder="My Name is" class="input" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-item">
+                        <input type="email" id="email" name="email" placeholder="My Email is" class="input" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-item">
+                        <input type="tel" id="number" name="number"placeholder="My Phone Number is" class="input" required>
+                        <span class="error-message" id="numberError"></span>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <textarea id="message" name="message" placeholder="I'd Like to Chat About" class="textarea" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="button">SEND</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h2>CONTACT INFO</h2>
+            <br><br><br>
+            <div class="contact-images">
+                <div class="contact-item">
+                    <img src="images/phone.png" alt="Swimming Pool" class="contact-image">
+                    <h3>PHONE</h3>
+                    <h3>06-1234 8888/08-1234 8888</h3>
+                </div>
+                <div class="contact-item">
+                    <img src="images/clock.png" alt="Conference Room" class="contact-image">
+                    <h3>OPERATION HOUR</h3>
+                    <p>Sunday, Monday, Tuesday:</p>
+                    <p>7.30am - 12.00am</p>
+                    <p>Wednesday, Thursday, Friday:</p> 
+                    <p>7.30am - 1.00am</p>  
+                    <p>Saturday & Eve of public holiday:</p>
+                    <p>7.30am - 2.00am</p>    
+                </div>
+                <div class="contact-item">
+                    <img src="images/location.png" alt="Library" class="contact-image">
+                    <h3>ADDRESS</h3>
+                    <h3>JALAN SERDANG, 43300 SERI</h3>
+                    <h3>KEMBANGAN, SELANGOR</h3>
+                </div>
+                <div class="contact-item">
+                    <img src="images/email.png" alt="Library" class="contact-image">
+                    <h3>EMAIL</h3>
+                    <p>admin@slgsportsclub.com.my</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Selangor Sport Club. All rights reserved.</p>
+        </footer>
+    
+        <script src="ContactUs.js"></script>
+    </body>
+    </html>
+    
+    

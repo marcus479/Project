@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 for universal text support -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+
+        <title>Contact Us</title>
+        <link rel="icon" type="image/png" href="images/htmlLogo1.png"> <!-- Icon for the browser tab -->
+        <link rel="stylesheet" href="ContactUS.css"> <!-- Link to external CSS file -->
+
+    </head>
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav class="menu-bar">
+            <ul>
+                <li class="logo">
+                    <a href="http://localhost/rwdd/HTML_Assignment/SelangorSportClub.html">
+                        <img src="images/htmlLogo2.png" alt="Logo"> <!-- Logo image -->
+                        <div class="logo-text">Selangor Sport Club</div>
+                    </a>
+                </li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/SelangorSportClub.html">Home</a></li>
+                <li><a>About</a>
+                    <ul class="dropdown"> <!-- Dropdown menu for About section -->
+                        <li><a href="http://localhost/rwdd/HTML_Assignment/history.html">History</a></li>
+                        <li><a href="http://localhost/rwdd/HTML_Assignment/generalCommitte.html">General Committee</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/membership.html">Membership</a></li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/Gallery.html">Gallery</a></li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/login_page.php">Member Login</a></li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/ContactUs.html">Contact Us</a></li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/Viewbooking.html">View Booking</a></li>
+            </ul>
+        </nav>
+
+        <!-- Page Header with Animation -->
+        <header class="page-header">
+            <div class="writeText">
+                <p class="text" id="typing">Contact Us and Tell Us Your Feeling.</p> <!-- Animated typing text -->
+            </div>
+        </header>
+
+        <!-- Contact Form Section -->
+        <div class="container">
+            <h2>Leave us a Message? Please fill the below form:</h2>
+            <form id="contactForm" class="form" action="ContactUs.php" method="POST">
+                <div class="grid"> <!-- Grid layout for form fields -->
+                    <div class="form-item">
+                        <input type="text" id="name" name="name" placeholder="My Name is" class="input" required>
+                        <span class="error-message" id="nameError"></span> <!-- Error message for name input -->
+                    </div>
+                    <div class="form-item">
+                        <input type="email" id="email" name="email" placeholder="My Email is" class="input" required>
+                        <span class="error-message" id="emailError"></span> <!-- Error message for email input -->
+                    </div>
+                    <div class="form-item">
+                        <input type="tel" id="number" name="number" placeholder="My Phone Number is" class="input" required>
+                        <span class="error-message" id="numberError"></span> <!-- Error message for phone number input -->
+                    </div>
+                </div>
+                <div class="form-item">
+                    <textarea id="message" name="message" placeholder="I'd Like to Chat About" class="textarea" required></textarea>
+                    <span class="error-message" id="messageError"></span> <!-- Error message for message input -->
+                </div>
+                <button type="submit" class="button">SEND</button> <!-- Submit button -->
+            </form>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="contact-info">
+            <h2>CONTACT INFO</h2>
+            <br><br><br>
+            <div class="contact-images">
+                <div class="contact-item">
+                    <img src="images/phone.png" alt="Phone Icon" class="contact-image">
+                    <h3>PHONE</h3>
+                    <h3>06-1234 8888/08-1234 8888</h3> <!-- Club phone numbers -->
+                </div>
+                <div class="contact-item">
+                    <img src="images/clock.png" alt="Clock Icon" class="contact-image">
+                    <h3>OPERATION HOUR</h3>
+                    <p>Sunday, Monday, Tuesday:</p>
+                    <p>7.30am - 12.00am</p> <!-- Operation hours on specific days -->
+                    <p>Wednesday, Thursday, Friday:</p> 
+                    <p>7.30am - 1.00am</p>  
+                    <p>Saturday & Eve of public holiday:</p>
+                    <p>7.30am - 2.00am</p>    
+                </div>
+                <div class="contact-item">
+                    <img src="images/location.png" alt="Location Icon" class="contact-image">
+                    <h3>ADDRESS</h3>
+                    <h3>JALAN SERDANG, 43300 SERI</h3>
+                    <h3>KEMBANGAN, SELANGOR</h3> <!-- Club address -->
+                </div>
+                <div class="contact-item">
+                    <img src="images/email.png" alt="Email Icon" class="contact-image">
+                    <h3>EMAIL</h3>
+                    <p>admin@slgsportsclub.com.my</p> <!-- Club email -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Selangor Sport Club. All rights reserved.</p>
+        </footer>
+    
+        <script src="ContactUs.js"></script> <!-- Link to external JavaScript file -->
+    </body>
+</html>

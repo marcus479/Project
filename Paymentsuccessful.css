@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif; /* Sets the font to Arial with sans-serif as a fallback */
+    display: flex; /* Makes the body a flex container */
+    flex-direction: column; /* Arranges content in a vertical column */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    min-height: 100vh; /* Ensures the body fills the full viewport height */
+    margin: 0; /* Removes default margins */
+    background-color: #e6f3ff; /* Sets a light blue background */
+    position: relative; /* Positions child elements relative to the body */
+}
+
+header {
+    width: 100%; /* Makes the header span the full width of the page */
+    position: absolute; /* Positions the header absolutely */
+    top: 20px; /* Positions the header 20px from the top of the page */
+    left: 20px; /* Positions the header 20px from the left side */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the header */
+}
+
+.container {
+    text-align: center; /* Centers text inside the container */
+    padding: 40px; /* Adds 40px of padding inside the container */
+    border: 5px solid #4B0082; /* Adds a 5px thick indigo border */
+    border-radius: 15px; /* Rounds the corners of the container */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adds a 15px shadow for a subtle depth effect */
+    background-color: white; /* Sets the container background color to white */
+    max-width: 600px; /* Sets the maximum width of the container to 600px */
+}
+
+h1 {
+    color: #4B0082; /* Sets the heading color to indigo */
+    font-size: 36px; /* Sets the font size to 36px */
+    margin: 30px 0; /* Adds 30px of margin above and below the heading */
+}
+
+.success-message {
+    display: flex; /* Makes the success message a flex container */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Centers items horizontally */
+}
+
+.success-icon {
+    width: 50px; /* Sets the success icon width to 50px */
+    height: 50px; /* Sets the success icon height to 50px */
+    margin-right: 20px; /* Adds 20px of space between the icon and the text */
+}
+
+p {
+    color: grey; /* Sets the text color to grey */
+    margin-bottom: 40px; /* Adds 40px of margin below the paragraph */
+    font-size: 24px; /* Sets the font size to 24px */
+}
+
+.next-button {
+    background-color: #4B0082; /* Sets the button background color to indigo */
+    color: white; /* Sets the button text color to white */
+    border: none; /* Removes the default border */
+    padding: 15px 30px; /* Adds 15px of vertical and 30px of horizontal padding */
+    border-radius: 5px; /* Rounds the corners of the button */
+    font-size: 20px; /* Sets the font size to 20px */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+.next-button:hover {
+    background-color: #e5e501; /* Changes the button background to yellow on hover */
+}

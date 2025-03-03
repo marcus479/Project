@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Specifies the document type and language as English -->
+<head>
+    <meta charset="UTF-8"> <!-- Defines the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the webpage is responsive on all devices -->
+    <title>Payment Successful</title> <!-- Sets the title of the webpage displayed in the browser tab -->
+    <link rel="stylesheet" href="Paymentsuccessful.css"> <!-- Links to an external CSS file for styling -->
+    <link rel="icon" type="image/png" href="images/page logo.jpeg"> <!-- Adds a favicon (icon) for the webpage -->
+    
+    <!-- JavaScript Section -->
+    <script>
+        // Function to navigate to a specific URL when the 'BACK' button is clicked
+        function goBack() {
+            window.location.href = "http://localhost/rwdd/HTML_Assignment/SelangorSportClub.html"; // Redirect to a specific URL (replace "#" with the actual URL)
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main Container for the content -->
+    <div class="container"> 
+        <div class="success-message"> <!-- Section to display the success message and icon -->
+            <img src="images/tick icon.jpeg" alt="Success Tick" class="success-icon"> <!-- Displays a success tick icon (replace with actual image path) -->
+            <h1>PAYMENT SUCCESSFUL</h1> <!-- Main heading for the success message -->
+        </div>
+        
+        <p>Your payment has been processed successfully.</p> <!-- Additional text to confirm the successful payment -->
+        
+        <button class="next-button" onclick="goBack()">BACK</button> <!-- Button that triggers the 'goBack' function to navigate back -->
+    </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="HomePage.css">
+        
+
+        <title>Selangor Sport Club</title>
+        <link rel="icon" type="image/png" href="images/htmlLogo1.png">
+
+    </head>
+
+    <body>
+
+        <nav class="menu-bar">
+            <ul>
+                <li class="logo">
+                    <a href="http://localhost/rwdd/HTML_Assignment/Member_homePage.html">
+                        <img src="images/htmlLogo2.png" alt="Logo">
+                        <div class="logo-text">Selangor Sport Club</div>
+                    </a>
+                </li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/Member_homePage.html">Home</a></li>
+                <li><a>About</a>
+                    <ul class="dropdown">
+                        <li><a href="http://localhost/rwdd/HTML_Assignment/history_member.html">History</a></li>
+                        <li><a href="http://localhost/rwdd/HTML_Assignment/GeneralCommitte_member.html">General Committee</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/gallery_member.html">Gallery</a></li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/contactUs_member.html">Contact Us</a></li>
+                <li><a href="http://localhost/rwdd/HTML_Assignment/Viewbooking_member.html">View Booking</a></li>
+                <li><a>Account</a>
+                    <ul class="dropdown">
+                        <li><a href="http://localhost/rwdd/HTML_Assignment/SelangorSportClub.html" class="logout-link">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+        <video class="video-bg" autoplay loop muted>
+            <source src="images\football_field_mp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+
+        <div class="facilities">
+            <h1>FACILITIES</h1>
+            <div class="facility-images">
+                <div class="facility-item">
+                    <img src="images/swimming_pool.jpg" alt="Swimming Pool" class="facility-image">
+                    <p>SWIMMING POOL</p>
+                    <a href="http://localhost/rwdd/HTML_Assignment/SwimmingPool_member.html" class="famore-info">MORE INFO</a>
+                </div>
+                <div class="facility-item">
+                    <img src="images/conference-room.jpg" alt="Conference Room" class="facility-image">
+                    <p>CONFERENCE ROOM</p>
+                    <a href="http://localhost/rwdd/HTML_Assignment/ConferenceRoom_member.html" class="famore-info">MORE INFO</a>
+                </div>
+                <div class="facility-item">
+                    <img src="images/library.jpg" alt="Library" class="facility-image">
+                    <p>LIBRARY</p>
+                    <a href="http://localhost/rwdd/HTML_Assignment/Library_member.html" class="famore-info">MORE INFO</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="sport">
+            <h1>SPORT</h1>
+            <div class="sport-images">
+                <div class="sport-item">
+                    <img src="images/snooker.jpg" alt="snooker" class="sport-image">
+                    <p>SNOOKER</p>
+                    <a href="http://localhost/rwdd/HTML_Assignment/snooker_member.html" class="spmore-info">MORE INFO</a>
+                </div>
+                <div class="sport-item">
+                    <br><br><br>
+                    <p class="tennis-text">TENNIS</p>
+                    <a href="http://localhost/rwdd/HTML_Assignment/Tennis_member.html" class="spmore-info">MORE INFO</a>
+                    <img src="images/tennis.jpg" alt="tennis" class="sport-image">
+                </div>
+                <div class="sport-item">
+                    <img src="images/gym_room.jpg" alt="gym" class="sport-image">
+                    <p>GYMNASIUM</p>
+                    <a href="http://localhost/rwdd/HTML_Assignment/gym_member.html" class="spmore-info">MORE INFO</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="latest-events">
+            <h1>Latest Events</h1>
+            <div class="events-grid">
+                <div class="event-item">
+                    <img src="images/Marathon.png" alt="Event 1" class="event-image">
+                    <h3>Marathon</h3>
+                    <p>Date: 25th September 2024</p>
+                    <a class="event-more-info" data-image="images/Marathon.png" data-caption="Marathon">More Info</a>
+                </div>
+                <div class="event-item">
+                    <img src="images/MusicFestival.png" alt="Event 2" class="event-image">
+                    <h3>Music Festival</h3>
+                    <p>Date: 10th October 2024</p>
+                    <a class="event-more-info" data-image="images/MusicFestival.png" data-caption="Music Festival">More Info</a>
+                </div>
+                <div class="event-item">
+                    <img src="images/2024NewYear.png" alt="Event 3" class="event-image">
+                    <h3>New Year</h3>
+                    <p>Date: 30th November 2024</p>
+                    <a class="event-more-info" data-image="images/2024NewYear.png" data-caption="New Year">More Info</a>
+                </div>
+            </div>
+        
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+        </div>
+
+
+        <div class="gallery">
+            <h1>Gallery</h1>
+
+            <div class="scroll-gallery" id="scrollGallery">
+                <img src="images/babyInSwim_gallery.jpg" alt="">
+                <img src="images/badminton.jpg" alt="">
+                <img src="images/golf_gallery.jpg" alt="">
+                <img src="images/library_gallery.jpg" alt="">
+                <img src="images/menSnooker_gallery.jpg" alt="">
+                <img src="images/tennisCourt_gallery.jpg" alt="">
+                <img src="images/ConferenceRoom_gallery.jpg" alt="">
+                <img src="images/babyInSwim_gallery.jpg" alt="">
+                <img src="images/indoor-swimming-pool-gallery.jpg" alt="">
+              </div>
+
+            </div>
+        </div>
+
+    
+        <div class="contact-info">
+            <h2>CONTACT INFO</h2>
+            <br><br><br>
+            <div class="contact-images">
+                <div class="contact-item">
+                    <img src="images/phone.png" alt="Swimming Pool" class="contact-image">
+                    <h3>PHONE</h3>
+                    <h3>06-1234 8888/08-1234 8888</h3>
+                </div>
+                <div class="contact-item">
+                    <img src="images/clock.png" alt="Conference Room" class="contact-image">
+                    <h3>OPERATION HOUR</h3>
+                    <p>Sunday, Monday, Tuesday:</p>
+                    <p>7.30am - 12.00am</p>
+                    <p>Wednesday, Thursday, Friday:</p> 
+                    <p>7.30am - 1.00am</p>  
+                    <p>Saturday & Eve of public holiday:</p>
+                    <p>7.30am - 2.00am</p>    
+                </div>
+                <div class="contact-item">
+                    <img src="images/location.png" alt="Library" class="contact-image">
+                    <h3>ADDRESS</h3>
+                    <h3>JALAN SERDANG, 43300 SERI</h3>
+                    <h3>KEMBANGAN, SELANGOR</h3>
+                </div>
+                <div class="contact-item">
+                    <img src="images/email.png" alt="Library" class="contact-image">
+                    <h3>EMAIL</h3>
+                    <p>admin@slgsportsclub.com.my</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <footer class="footer">
+            <p>&copy; 2024 Selangor Sport Club. All rights reserved.</p>
+        </footer>
+
+        <script src="HomePage.js"></script>
+    </body>
+</html>

@@ -1,0 +1,251 @@
+/* Sets base styles for the body, including font, background color, margin, and padding */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20;
+}
+
+/* Styles for the navigation menu bar */
+.menu-bar {
+    background-color: #333333;
+    height: 180px;
+    overflow: hidden;
+    position: fixed; /* Sticks menu bar to the top of the page */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width across the page */
+    z-index: 1000; /* Ensures menu bar stays above other content */
+}
+
+/* Styling for the unordered list within the navigation bar */
+.menu-bar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Pushes logo to the left by setting it to margin-right: auto */
+.menu-bar ul .logo {
+    margin-right: auto;
+}
+
+/* List items in the navigation bar */
+.menu-bar ul li {
+    position: relative;
+}
+
+/* Link styling within the navigation bar items */
+.menu-bar ul li a {
+    display: block;
+    padding: 20px 50px; /* Adds padding around each link */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Styling for logo image */
+.menu-bar ul li a img {
+    height: 40px; /* Controls logo image height */
+    vertical-align: middle;
+}
+
+/* Hover effect for links in the menu bar */
+.menu-bar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Dropdown menu styling */
+.menu-bar ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions dropdown below the main menu */
+    left: 0;
+    background-color: #001f3f;
+    min-width: 220px; /* Sets a minimum width for the dropdown */
+    z-index: 3000;
+}
+
+/* Displays the dropdown menu on hover */
+.menu-bar ul li:hover .dropdown {
+    display: block;
+}
+
+/* Dropdown menu items */
+.menu-bar ul .dropdown li {
+    float: none;
+}
+
+/* Link styling within the dropdown menu */
+.menu-bar ul .dropdown li a {
+    padding: 5px 16px;
+    color: white;
+}
+
+/* Hover effect for dropdown menu links */
+.menu-bar ul .dropdown li a:hover {
+    background-color: #575757;
+}
+
+/* Logo styling within menu bar, with larger height */
+.menu-bar ul li a img {
+    height: 80px; /* Sets a taller logo size */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Logo text styling */
+.menu-bar ul li .logo-text {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+/* Removes hover effect from logo section */
+.menu-bar ul li.logo a:hover {
+    background-color: #575757;
+}
+
+/* Page header styling */
+.page-header {
+    background-color: rgb(0, 173, 230); /* Sets background color to dark blue */
+    color: white;
+    height: 210px;
+    margin-top: 180px; /* Pushes content below the fixed menu bar */
+    width: auto;
+    text-align: center;
+    margin-bottom: 70px;
+    display: flex; /* Centers content */
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Page header text styling */
+.page-header h1 {
+    margin: 0;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* Gallery container styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Individual gallery image styling */
+.gallery-image {
+    width: 300px; /* Image width */
+    height: 300px; /* Image height */
+    object-fit: cover; /* Fills image container while preserving aspect ratio */
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s; /* Smooth hover transition */
+}
+
+/* Scale effect on hover for gallery images */
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive styles for gallery images on smaller screens */
+@media (max-width: 768px) {
+    .gallery-image {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Contact information container styling */
+.contact-info {
+    padding: 50px;
+    background-color: #add8e6; /* Light blue background */
+    color: #333333; /* Dark gray text */
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Flex container for contact items, allowing wrapping */
+.contact-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between contact items */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Individual contact item styling */
+.contact-item {
+    text-align: center;
+    flex-basis: 200px;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+/* Contact information heading styling */
+.contact-info h2 {
+    font-weight: bold;
+    font-size: 48px;
+    color: #0056b3; /* Blue color for main heading */
+}
+
+/* Subheading styling for contact information */
+.contact-info h3 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+}
+
+/* Contact item paragraph styling */
+.contact-item p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #555555;
+    font-weight: normal;
+}
+
+/* Styling for images within contact items */
+.contact-image {
+    height: 80px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+/* Scale effect on hover for contact items */
+.contact-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+    background-color: #a19e9e;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333; /* Dark footer background */
+    color: white;
+    position: relative;
+}
+
+/* Footer text styling */
+.footer p {
+    margin: 0;
+    font-size: 20px;
+}
